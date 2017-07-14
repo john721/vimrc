@@ -1,0 +1,9 @@
+[submodule "SrcExpl"]
+	path = SrcExpl
+	url = https://github.com/wesleyche/SrcExpl
+[submodule "Trinity"]
+	path = Trinity
+	url = https://github.com/wesleyche/Trinity
+[submodule "taglist.vim"]
+	path = taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim
