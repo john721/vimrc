@@ -8,6 +8,7 @@
 --------
 
 * 直接執行 setup_vim.sh 。這指令會看看目前使用者的家目錄裡有沒有 .vimrc這個檔案，沒有的話，就做個Symbolic Link。
+* 把 plugin 下載回來: git submodule update --init
 * 以後要是有在repo上更新，切換到 vimrc 的 git repo, 下指令 git pull 就可以完成同步了。
 
 檔案說明
