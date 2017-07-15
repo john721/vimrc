@@ -1,15 +1,27 @@
-set number 					"顯示行號, 取消用 set nonumber
+"set number 					"顯示行號, 取消用 set nonumber
+set relativenumber				"顯示相對行號
 syntax on 					"開啟語法上色
 set hlsearch 					"在蒐尋字串時，字串會變高亮底色。
 set laststatus=2				"顯示狀態列
 set tabstop=8
 set cursorline					"游標的那一列用長長的底線標示出來
 set ignorecase					"找字串時忽略大小寫
-"execute pathogen#infect()
 
-"Tab 
+"啟動 pathogen 外掛, 以管理在 bundle 目錄下的所有外掛
+execute pathogen#infect()
+
+"powerline plugin{
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+"}
+
+
+"Tab notes {
 "望文生義常用指令：tabnew, tabclose, tabmove N, tabonly
 "gt / gT 跳到下一個或上一個 Tab; 
+"}
 
 "設定一些快速鍵對映, 用來執行一些plugin
 " Open and close all the three plugins on the same time
@@ -49,6 +61,14 @@ set wildmenu "Display all matching files when we tab complete"
 "  - ^x^], for tags only
 "  - ^x^d, macros, definitions
 "  - ^n, ^p anything specified by the 'complete' option
+
+"taglist {
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 0
+let Tlist_GainFocus_On_ToggleOpen = 1
+nnoremap <leader>tl : Tlist<CR>
+"}
 
 "--- ctags --- 用 ctrl-] 跳到標籤，再用ctrl-t跳回原處 
 "首先在src 目錄下產生一個 tags 的檔案.在此自訂一個指令叫做是 'MakeTags'自訂指令第一個字母要大寫。

@@ -1,9 +1,18 @@
 [submodule "SrcExpl"]
-	path = SrcExpl
+	path = bundle/SrcExpl
 	url = https://github.com/wesleyche/SrcExpl
 [submodule "Trinity"]
-	path = Trinity
+	path = bundle/Trinity
 	url = https://github.com/wesleyche/Trinity
 [submodule "taglist.vim"]
-	path = taglist.vim
+	path = bundle/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim
+[submodule "vim-pathogen"]
+	path = autoload/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim-powerline"]
+	path = bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline
