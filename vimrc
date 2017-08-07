@@ -1,5 +1,5 @@
-"set number 					"顯示行號, 取消用 set nonumber
-set relativenumber				"顯示相對行號
+set number 					"顯示行號, 取消用 set nonumber
+"set relativenumber				"顯示相對行號
 syntax on 					"開啟語法上色
 set hlsearch 					"在蒐尋字串時，字串會變高亮底色。
 set laststatus=2				"顯示狀態列
@@ -38,8 +38,8 @@ map <F10> :TrinityToggleTagList<CR>
 map <F5> :TrinityToggleNERDTree<CR>""""
 
 "設定滑鼠
-set mouse=nv					"只在 Normal 以及 Visual 模式使用滑鼠，也就是取消 Insert 模式的滑鼠
-"set mouse=					"用滑鼠選字後，再按終端機快速鍵複製文字
+"set mouse=nv					"只在 Normal 以及 Visual 模式使用滑鼠，也就是取消 Insert 模式的滑鼠
+set mouse=					"用滑鼠選字後，再按終端機快速鍵複製文字
 "set mouse=a					"用滑鼠選字後，按y複製，再移到要貼上的地方按p貼上。
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -78,4 +78,6 @@ command! MakeTags !ctags -R .
 set tags=tags;/ 				"ctags的tag檔蒐尋目錄
 set tags+=/Users/john/git/dpdk-17.02
 
+source ~/.vim/cscope_maps.vim
+source ~/.vimrc_custom
 
