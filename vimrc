@@ -78,6 +78,6 @@ command! MakeTags !ctags -R .
 set tags=tags;/ 				"ctags的tag檔蒐尋目錄
 set tags+=/Users/john/git/dpdk-17.02
 
-source ~/.vim/cscope_maps.vim
+source ~/.vim/cscope_quickfix.vim
 source ~/.vimrc_custom
 
