@@ -19,3 +19,9 @@
 [submodule "Visual-Mark"]
 	path = bundle/Visual-Mark
 	url = https://github.com/vim-scripts/Visual-Mark
+[submodule "colortastes/jellybeans"]
+	path = colortastes/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim
+[submodule "colortastes/jellygrass"]
+	path = colortastes/jellygrass
+	url = https://github.com/chr4/jellygrass.vim

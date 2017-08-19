@@ -8,8 +8,15 @@
 --------
 
 * 直接執行 setup_vim.sh 。這指令會看看目前使用者的家目錄裡有沒有 .vimrc這個檔案，沒有的話，就做個Symbolic Link。
-* 把 plugin 下載回來: git submodule update --init
+* 把 plugin, 色彩主題們給下載回來: git submodule update --init
 * 以後要是有在repo上更新，切換到 vimrc 的 git repo, 下指令 git pull 就可以完成同步了。
+* 更新色彩主題: 執行 setup_colors.sh
+* 客製自己喜愛的色彩主題: 
+    1. 到 http://vimcolors.com 找個自己喜歡的
+    2. 把 github 的地址記下, 如 https://github.com/chr4/jellygrass.vim
+    3. cd vimrc; 
+       git submodule add https://github.com/chr4/jellygrass.vim colortastes/jellygrass
+    4. setup_colors.sh
 
 檔案說明
 --------
