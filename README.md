@@ -30,4 +30,7 @@
 1.   把使用 git submodule 抓下的 plugin 內的檔案，給連結好，以便使用。
 2.   把 vimrc 給連結好。
   
+* cscope_quickfix.vim
+    cscope 的 quickfix plugin. 可以讓你在 vim 下了 make 指令之後, 若發現有
+    warning 或是 error 時, 立即跳轉到出錯的位置, 立即修復.
 

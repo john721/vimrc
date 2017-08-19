@@ -1,11 +1,20 @@
 set number 					"顯示行號, 取消用 set nonumber
 "set relativenumber				"顯示相對行號
 syntax on 					"開啟語法上色
-set hlsearch 					"在蒐尋字串時，字串會變高亮底色。
-set laststatus=2				"顯示狀態列
-set tabstop=8
+set hlsearch 					"在蒐尋字串時，字串會變高亮底色。 == set hls
 set cursorline					"游標的那一列用長長的底線標示出來
-set ignorecase					"找字串時忽略大小寫
+set ignorecase					"找字串時忽略大小寫. == set ic
+
+set laststatus=2				"顯示狀態列
+
+set scrolloff=5					"游標移到最下面五行時, 即開始捲動畫面
+set scrolljump=5				"一次捲動 5 行. 節約頻寬
+
+set tabstop=8					"tab 設定為 8 個空白那麼大
+"set expandtab					"接下來的 tab 用空白取代. 用 retab 可把所有 tab 都轉空白
+
+set autoindent					"自動縮排. == set ai
+"set paste					"autoindent 後, 先 paste 再貼上剪貼簿的內容, 才不會亂掉
 
 "啟動 pathogen 外掛, 以管理在 bundle 目錄下的所有外掛
 execute pathogen#infect()
@@ -76,7 +85,7 @@ nnoremap <leader>tl : Tlist<CR>
 command! MakeTags !ctags -R .
 "再來把會同時使用的專案的tags 檔也加入，蒐尋籤的時候就可以方便的跳過去參考。
 set tags=tags;/ 				"ctags的tag檔蒐尋目錄
-set tags+=/Users/john/git/dpdk-17.02
+set tags+=~
 
 source ~/.vim/cscope_quickfix.vim
 source ~/.vimrc_custom
