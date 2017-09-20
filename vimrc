@@ -87,6 +87,12 @@ command! MakeTags !ctags -R .
 set tags=tags;/ 				"ctags的tag檔蒐尋目錄
 set tags+=~
 
+" 修正 Trinity 開啟時的問題: https://github.com/scrooloose/nerdtree/issues/643
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeGlyphReadOnly = "RO"
+
 source ~/.vim/cscope_quickfix.vim
 source ~/.vimrc_custom
 
