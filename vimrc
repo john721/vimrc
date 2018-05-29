@@ -120,10 +120,10 @@ endfunc
 "}
 
 "設定一些快速鍵對映
-nmap <F3> :call ToggleMouse()<CR>
+nmap <F6> :call ToggleMouse()<CR>
 
 "更新ctags
-nmap <silent> <F4> :call UpdateCtags()<CR> <CR>
+nmap <silent> <F7> :call UpdateCtags()<CR> <CR>
 
 nnoremap <F5> :call NextColor()<CR>
 
@@ -141,7 +141,7 @@ map <F10> :TrinityToggleTagList<CR>
 map <F11> :TrinityToggleNERDTree<CR>""""
 
 "快速鍵的小抄
-map <F12> :echo "F3:滑鼠 F4:更新tags  F5:換色 F8:Trinity.  F9:SrcExpl. F10:TagList F11:NerdTree" <CR>
+map <F12> :echo "F5:換色 F6:滑鼠 F7:更新tags  F8:Trinity.  F9:SrcExpl. F10:TagList F11:NerdTree" <CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "From the video 'How to Do 90% of What Plugins Do (With Just Vim)'
@@ -172,7 +172,7 @@ nnoremap <leader>tl : Tlist<CR>
 "}
 
 "Source Explorer 的建議設置, see srcexpl.vim
-let g:SrcExpl_winHeight = 8
+let g:SrcExpl_winHeight = 4
 let g:SrcExpl_refreshTime = 100
 let g:SrcExpl_jumpKey = "<ENTER>"
 let g:SrcExpl_gobackKey = "<SPACE>"
@@ -183,9 +183,9 @@ let g:SrcExpl_pluginList = [
 let g:SrcExpl_searchLocalDef = 1
 let g:SrcExpl_isUpdateTags = 0
 let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ."
-let g:SrcExpl_updateTagsKey = "<F12>"
-let g:SrcExpl_prevDefKey = "<F3>"
-let g:SrcExpl_nextDefKey = "<F4>"
+"let g:SrcExpl_updateTagsKey = "<F12>"
+"let g:SrcExpl_prevDefKey = "<F3>"
+"let g:SrcExpl_nextDefKey = "<F4>"
 
 " 修正 Trinity 開啟時的問題: https://github.com/scrooloose/nerdtree/issues/643
 let g:NERDTreeDirArrows = 1
