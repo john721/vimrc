@@ -1,23 +1,23 @@
 [submodule "SrcExpl"]
-	path = bundle/SrcExpl
+	path = pack/plugin/start/SrcExpl
 	url = https://github.com/wesleyche/SrcExpl
 [submodule "Trinity"]
-	path = bundle/Trinity
+	path = pack/plugin/start/Trinity
 	url = https://github.com/wesleyche/Trinity
 [submodule "taglist.vim"]
-	path = bundle/taglist.vim
+	path = pack/plugin/start/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim
 [submodule "vim-pathogen"]
 	path = autoload/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
 [submodule "nerdtree"]
-	path = bundle/nerdtree
+	path = pack/plugin/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree
 [submodule "vim-powerline"]
-	path = bundle/vim-powerline
+	path = pack/plugin/start/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline
 [submodule "Visual-Mark"]
-	path = bundle/Visual-Mark
+	path = pack/plugin/start/Visual-Mark
 	url = https://github.com/vim-scripts/Visual-Mark
 [submodule "colortastes/jellybeans"]
 	path = colortastes/jellybeans

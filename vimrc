@@ -39,7 +39,6 @@ else
 endif
 
 "啟動 pathogen 外掛, 以管理在 bundle 目錄下的所有外掛
-execute pathogen#infect()
 
 "powerline plugin{
 set guifont=PowerlineSymbols\ for\ Powerline
