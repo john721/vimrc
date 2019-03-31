@@ -7,9 +7,6 @@
 [submodule "taglist.vim"]
 	path = pack/plugin/start/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim
-[submodule "vim-pathogen"]
-	path = autoload/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
 [submodule "nerdtree"]
 	path = pack/plugin/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree
