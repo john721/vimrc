@@ -32,8 +32,8 @@ else
 endif
 
 if has("multi_byte")
-	set fileencodings=utf-8,utf-16,big5,gb2312,gbk,gb18030,euc-jp,euc-kr,latin1
-	set encoding=utf-8
+	"set fileencodings=utf-8,utf-16,big5,gb2312,gbk,gb18030,euc-jp,euc-kr,latin1
+	"set encoding=utf-8
 else
 	echoerr "If +multi_byte is not included, you should compile Vim with big features."
 endif
@@ -99,13 +99,16 @@ function! NextColor()
 	endif
 endfunc
 
+"http://vim.wikia.com/wiki/Highlight_current_line
+"hi CursorLine cterm=NONE ctermbg=darkblue guibg=darkred guifg=white
+
 "--- ctags --- 用 ctrl-] 跳到標籤，再用ctrl-t跳回原處 
 "首先在src 目錄下產生一個 tags 的檔案.在此自訂一個指令叫做是 'MakeTags'自訂指令第一個字母要大寫。
 "以後有更新檔案，標籤跑掉，就重下這個自訂指令更新之.
 command! MakeTags !ctags -R .
-"再來把會同時使用的專案的tags 檔也加入，蒐尋籤的時候就可以方便的跳過去參考。
-set tags=tags;/ 				"ctags的tag檔蒐尋目錄
-set tags+=~
+"再來把會同時使用的專案的tags 檔也加入，搜尋標籤的時候就可以方便的跳過去參考。
+set tags=./tags,tags; 				"ctags的tag檔搜尋目錄, 
+"接著就看 .vimrc_custom 裡的 tags 還有哪些檔案也要加入的
 
 function! UpdateCtags()
 	execute "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
@@ -192,6 +195,12 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeGlyphReadOnly = "RO"
 
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
 "GitGutter Settings{
 "see https://github.com/airblade/vim-gitgutter
 "let g:gitgutter_max_signs = 500
@@ -210,6 +219,8 @@ if $CSCOPE_DB == ""
 	cscope add ./
 endif
 "}
+
+" 顯示 CR LF 換行符號 :e ++ff=unix:e ++ff=unix
 
 source ~/.vim/cscope_quickfix.vim
 source ~/.vimrc_custom

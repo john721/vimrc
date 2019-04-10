@@ -37,3 +37,12 @@
 [submodule "pack/plugin/start/speeddating"]
 	path = pack/plugin/start/speeddating
 	url = https://tpope.io/vim/speeddating.git
+[submodule "pack/plugin/start/clang_complete"]
+	path = pack/plugin/start/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
+[submodule "pack/plugin/start/ultisnips"]
+	path = pack/plugin/start/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "pack/plugin/start/vim-snippets"]
+	path = pack/plugin/start/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
