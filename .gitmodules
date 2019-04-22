@@ -46,3 +46,6 @@
 [submodule "pack/plugin/start/vim-snippets"]
 	path = pack/plugin/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "pack/plugin/start/vim-gitgutter"]
+	path = pack/plugin/start/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git

@@ -90,6 +90,14 @@ call add(s:color_list, 'syncolor')
 call add(s:color_list, 'torte')
 call add(s:color_list, 'vividchalk')
 call add(s:color_list, 'zellner')
+
+function! Vimdiff_color()
+	highlight DiffAdd    cterm=bold ctermfg=Black ctermbg=16 gui=none guifg=bg guibg=LightRed
+	highlight DiffDelete cterm=bold ctermfg=Black ctermbg=15 gui=none guifg=bg guibg=LightRed
+	highlight DiffChange cterm=bold ctermfg=Black ctermbg=17 gui=none guifg=bg guibg=LightMagenta
+	highlight DiffText   cterm=bold ctermfg=Black ctermbg=87 gui=none guifg=bg guibg=LightRed
+endfunc
+
 function! NextColor()
 	execute "colorscheme " . s:color_list[s:current_color_idx]
 "	echo s:color_list s:color_list[s:current_color_idx] s:current_color_idx len(s:color_list)
@@ -97,7 +105,14 @@ function! NextColor()
 	if s:current_color_idx >= len(s:color_list)
 		let s:current_color_idx = 0
 	endif
+	if &diff
+		:call Vimdiff_color()
+	endif
 endfunc
+
+if &diff
+	:call Vimdiff_color()
+endif
 
 "http://vim.wikia.com/wiki/Highlight_current_line
 "hi CursorLine cterm=NONE ctermbg=darkblue guibg=darkred guifg=white
@@ -203,11 +218,11 @@ let g:UltiSnipsEditSplit="vertical"
 
 "GitGutter Settings{
 "see https://github.com/airblade/vim-gitgutter
-"let g:gitgutter_max_signs = 500
+let g:gitgutter_max_signs = 500
 "GitGutterEnable
 "GitGutterSignsEnable
 "GitGutterLineHighlightsDisable
-"set updatetime=400
+set updatetime=100
 "}
 
 " Cscope 相關的指令小抄{
