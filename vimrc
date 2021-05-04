@@ -145,11 +145,9 @@ nmap <silent> <F7> :call UpdateCtags()<CR> <CR>
 nnoremap <F5> :call NextColor()<CR>
 
 
-"一次開啟3個Trace Code 神器: Tag List, Source Explorer 和 NerdTree
-map <F8> :TrinityToggleAll<CR>
+map <F8> :cclose<CR>
 
-" srcexpl.vim Source Explorer 的獨立開關
-map <F9> :TrinityToggleSourceExplorer<CR>
+map <F9> :cclose <CR>
 
 " taglist.vim 的獨立開關
 map <F10> :TrinityToggleTagList<CR>
@@ -158,7 +156,7 @@ map <F10> :TrinityToggleTagList<CR>
 map <F11> :TrinityToggleNERDTree<CR>""""
 
 "快速鍵的小抄
-map <F12> :echo "F5:換色 F6:滑鼠 F7:更新tags  F8:Trinity.  F9:SrcExpl. F10:TagList F11:NerdTree" <CR>
+map <F12> :echo "F5:換色 F6:滑鼠 F7:更新tags  F8/F9:關cscope  F10:TagList F11:NerdTree" <CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "From the video 'How to Do 90% of What Plugins Do (With Just Vim)'
